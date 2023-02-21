@@ -25,5 +25,9 @@ const user = require("./routes/user");
 app.use("/api/v1",post);
 app.use("/api/v1",user);
 
+app.get("/",(req,res)=>{
+    res.send("working");
+});
+
 
 module.exports = app;
