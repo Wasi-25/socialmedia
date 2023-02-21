@@ -134,7 +134,7 @@ export const registerUser =
       });
 
       const { data } = await axios.post(
-        "https://mygram1.netlify.app/api/v1/register",
+        "/api/v1/register",
         { name, email, password, avatar },
         {
           headers: {
