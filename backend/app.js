@@ -1,6 +1,7 @@
 const { urlencoded } = require("express");
 const express = require("express");
 const app = express();
+const path = require("path");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 
@@ -26,9 +27,10 @@ const user = require("./routes/user");
 app.use("/api/v1",post);
 app.use("/api/v1",user);
 
-app.get("/",(req,res)=>{
-    res.send("working");
-});
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
+app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
 
 module.exports = app;
