@@ -72,9 +72,9 @@ const Post = ({
         min%=60;
         hh+=1;
       }
-      if(min<10){
-        min="0"+min;
-      }
+      // if(min<10){
+      //   min="0"+min;
+      // }
 
       var Meridien;
       if (hh < 12) {
