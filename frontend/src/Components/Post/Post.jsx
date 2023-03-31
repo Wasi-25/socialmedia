@@ -52,10 +52,6 @@ const Post = ({
       hh= hh + 5; 
       hh %= 12;
 
-      if(hh<10){
-        hh="0"+hh;
-      }
-
 
       var min1 = Number(createdAt[14]-'0');
       var min2 = Number(createdAt[15]-'0');
@@ -72,9 +68,9 @@ const Post = ({
         min%=60;
         hh+=1;
       }
-      // if(min<10){
-      //   min="0"+min;
-      // }
+      if(min<=9){
+        min="0"+min;
+      }
 
       var Meridien;
       if (hh < 12) {
