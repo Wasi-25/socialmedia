@@ -33,15 +33,9 @@ app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 314902ff381347f3fd391600cd73acc3f53a1f85
-=======
 
 app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 });
->>>>>>> 314902ff381347f3fd391600cd73acc3f53a1f85
 
 module.exports = app;
