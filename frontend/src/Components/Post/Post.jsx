@@ -50,8 +50,11 @@ const Post = ({
     var hh = h1 * 10 + h2;
       
       hh= hh + 5; 
-      hh %= 12;
-
+      if(hh===12){
+        hh=12
+      }else{
+        hh %= 12;
+      }
 
       var min1 = Number(createdAt[14]-'0');
       var min2 = Number(createdAt[15]-'0');
